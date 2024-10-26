@@ -1,5 +1,10 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用)
 
+#ipv6检测
+DOMAIN-SUFFIX,test-ipv6.com
+#中科大测速
+DOMAIN-SUFFIX,test.ustc.edu.cn
+
 # MyList
 # 域名后缀匹配
 DOMAIN-SUFFIX,time.windows.com
@@ -8,6 +13,10 @@ DOMAIN-SUFFIX,hao123.com
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,baidu
+# home
+DOMAIN-KEYWORD,jzj.life
+DOMAIN-KEYWORD,zysmartlife
+DOMAIN-KEYWORD,dingdangjia
 
 # IP段匹配
 IP-CIDR,219.146.1.66/32,no-resolve
@@ -319,10 +328,7 @@ DOMAIN-SUFFIX,vipstatic.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
-# home
-DOMAIN-SUFFIX,jzj.life
-DOMAIN-SUFFIX,zysmartlife.com
-DOMAIN-SUFFIX,dingdangjia.com
+
 
 # Xunlei 迅雷
 DOMAIN-SUFFIX,00cdn.com
