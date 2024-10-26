@@ -319,6 +319,11 @@ DOMAIN-SUFFIX,vipstatic.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
+# home
+DOMAIN-SUFFIX,jzj.life
+DOMAIN-SUFFIX,zysmartlife.com
+DOMAIN-SUFFIX,dingdangjia.com
+
 # Xunlei 迅雷
 DOMAIN-SUFFIX,00cdn.com
 DOMAIN-SUFFIX,88cdn.com
