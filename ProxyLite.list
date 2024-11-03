@@ -32,3 +32,5 @@ IP-CIDR,208.67.220.220/32,no-resolve
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,debian.map
+DOMAIN-KEYWORD,homeassistant
+DOMAIN-KEYWORD,home-assistant
