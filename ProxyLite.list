@@ -35,4 +35,5 @@ IP-CIDR,208.67.220.220/32,no-resolve
 DOMAIN-KEYWORD,debian.map
 DOMAIN-KEYWORD,homeassistant
 DOMAIN-KEYWORD,home-assistant
-
+DOMAIN-KEYWORD,hacs.vip
+DOMAIN-KEYWORD,hacs.xyz
