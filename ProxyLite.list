@@ -3,8 +3,7 @@ DOMAIN-SUFFIX,viptwo.top
 DOMAIN-SUFFIX,followme.com
 DOMAIN-SUFFIX,followme.ceo
 DOMAIN-SUFFIX,whatsmydns.me
-DOMAIN-SUFFIX,api.ipify.org
-DOMAIN-SUFFIX,cfsrq.dxk78.net
+
 
 
 # IP段匹配
@@ -36,5 +35,4 @@ IP-CIDR,208.67.220.220/32,no-resolve
 DOMAIN-KEYWORD,debian.map
 DOMAIN-KEYWORD,homeassistant
 DOMAIN-KEYWORD,home-assistant
-DOMAIN-KEYWORD,pornhub.com
-DOMAIN-KEYWORD,cfsrq.dxk78.net
+
