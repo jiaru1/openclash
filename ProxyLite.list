@@ -5,7 +5,7 @@ DOMAIN-SUFFIX,followme.ceo
 DOMAIN-SUFFIX,whatsmydns.me
 DOMAIN-SUFFIX,api.ipify.org
 DOMAIN-SUFFIX,cfsrq.dxk78.net
-DOMAIN-SUFFIX,pornhub.com
+
 
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
@@ -36,4 +36,5 @@ IP-CIDR,208.67.220.220/32,no-resolve
 DOMAIN-KEYWORD,debian.map
 DOMAIN-KEYWORD,homeassistant
 DOMAIN-KEYWORD,home-assistant
-
+DOMAIN-KEYWORD,pornhub.com
+DOMAIN-KEYWORD,cfsrq.dxk78.net
