@@ -4,6 +4,8 @@
 DOMAIN-SUFFIX,test-ipv6.com
 #中科大测速
 DOMAIN-SUFFIX,test.ustc.edu.cn
+#翻译插件
+analytics.immersivetranslate.com
 
 # MyList
 # 域名后缀匹配
