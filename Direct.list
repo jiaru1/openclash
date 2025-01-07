@@ -1,9 +1,9 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用)
 
 #ipv6检测
-DOMAIN-SUFFIX,test-ipv6.com
+#DOMAIN-SUFFIX,test-ipv6.com
 #中科大测速
-DOMAIN-SUFFIX,test.ustc.edu.cn
+#DOMAIN-SUFFIX,test.ustc.edu.cn
 #翻译插件
 analytics.immersivetranslate.com
 
@@ -13,13 +13,14 @@ DOMAIN-SUFFIX,time.windows.com
 DOMAIN-SUFFIX,lanzov.com
 DOMAIN-SUFFIX,hao123.com
 DOMAIN-SUFFIX,jbzj.us.kg
+DOMAIN-SUFFIX,jbzj2.us.kg
+DOMAIN-SUFFIX,jbzj.life
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,baidu
 # home
 DOMAIN-KEYWORD,jzj.life
 DOMAIN-KEYWORD,zysmartlife
-DOMAIN-KEYWORD,dingdangjia
 DOMAIN-KEYWORD,jbzj
 
 
