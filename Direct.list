@@ -6,6 +6,7 @@
 #DOMAIN-SUFFIX,test.ustc.edu.cn
 #翻译插件
 analytics.immersivetranslate.com
+deepseek.com
 
 # MyList
 # 域名后缀匹配
@@ -15,6 +16,8 @@ DOMAIN-SUFFIX,hao123.com
 DOMAIN-SUFFIX,jbzj.us.kg
 DOMAIN-SUFFIX,jbzj2.us.kg
 DOMAIN-SUFFIX,jbzj.life
+DOMAIN-SUFFIX,deepseek.com
+
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,baidu
