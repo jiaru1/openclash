@@ -1,0 +1,219 @@
+;定义锚点
+pr: &pr {type: select, proxies: [节点选择, 所有自动, IPv6-自动, 除香港-自动, 香港-自动, 台湾-自动, 日本-自动, 新加坡-自动, 美国-自动, 其他-自动, 全部节点]}
+HK: &HK "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"
+UHK: &UHK "(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea|美|US|纽约|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|🇨🇦|Canada|United States|加拿大|CA|IN|India|印度|FR|France|法国|TUR|Turkey|土耳其|DE|Germany|德国|UK|United Kingdom|英国|AU|Australia|澳大利亚|RU|Russian Federation|俄罗斯|IT|意大利|NL|荷兰|CO|哥伦比亚|CL|智力|BR|巴西|AE|迪拜|ZA|南非|SA|沙特阿拉伯|IL|以色列|AE|迪拜|CH|瑞士|SE|瑞典|ES|西班牙|MX|墨西哥|VN|越南)"
+TW: &TW "(?=.*(台|🇹🇼|TW|(?i)TaiWan))^((?!(港|日|韩|新|深|美)).)*$"
+JP: &JP "(?=.*(日本|JP|东京|大阪|🇯🇵|(?i)Japan))^((?!(港|台|韩|新|深|美)).)*$"
+KR: &KR "(?=.*(韩国|KR|首尔|春川|🇰🇷|(?i)Korea))^((?!(港|台|日|新|美)).)*$"
+SG: &SG "(?=.*((新加坡|SG|坡|狮城|🇸🇬|(?i)Singapore))^((?!(港|台|韩|日|美)).)*$"
+US: &US "(?=.*美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"
+OT: &OT "(?=.*美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"
+
+;使用锚点定义策略组
+custom_proxy_group:
+  - name: "节点选择"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/YouTube.png"
+    proxies:
+      - 所有自动
+      - IPv6-自动
+      - 除香港-自动
+      - 香港-自动
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - 全部节点
+  - name: "YouTube"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/YouTube.png"
+
+  - name: "Google"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Google.png"
+
+  - name: "ChatGPT"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/ChatGPT.png"
+
+  - name: "GitHub"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/GitHub.png"
+
+  - name: "OneDrive"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/OneDrive.png"
+
+  - name: "Microsoft"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Microsoft.png"
+
+  - name: "TikTok"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/TikTok.png"
+
+  - name: "Telegram"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Telegram.png"
+
+  - name: "NETFLIX"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Netflix.png"
+
+  - name: "Mytv"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Sony_Live.png"
+
+  - name: "Speedtest"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/SpeedTest.png"
+
+  - name: "PayPal"
+    <<: *pr  # 引用锚点 pr
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/PayPal.png"
+
+  - name: "Apple"
+    <<: *pr  # 引用锚点 pr  
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Apple_rainbow.png"
+
+  - name: "直连"
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+      - 全部节点
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/DIRECT.png"
+  - name: "漏网之鱼"
+    type: select
+    proxies:
+      - 直连
+      - 节点选择
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Fish.png"
+
+  - name: "所有-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: ".*"
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Auto_Link.png"
+
+  - name: "IPv6-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "(IPV6|IPv6|iPV6|ipv6)"
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Auto_Link.png"
+
+  - name: "除香港-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*UHK"  # 引用锚点 UHK
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Auto_Link.png"
+
+  - name: "香港-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150  
+    filter: "*HK"  # 引用锚点 HK
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Hong_Kong.png"# 引用锚点 HK
+
+  - name: "台湾-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*TW"  # 引用锚点 TW
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Taiwan_Province.png"
+
+  - name: "日本-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*JP"  # 引用锚点 JP
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Japan.png"
+
+  - name: "新加坡-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*SG"  # 引用锚点 SG
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Singapore.png"
+
+  - name: "韩国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*KR"  # 引用锚点 KR
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/South_Korea.png"
+
+  - name: "美国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*US"  # 引用锚点 US
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/USA.png"
+
+  - name: "其他-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    filter: "*OT"  # 引用锚点 OT
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/UK.png"
+
+  - name: "全部节点"
+    type: select
+    include-all: true
+    icon: "https://github.com/Vbaethon/HOMOMIX/blob/main/Icon/Color/Large/Network_2.png"    
+;使用锚点 pr 定义策略组
+;规则集定义
+ruleset=全球直连,https://raw.githubusercontent.com/jiaru1/openclash/main/Direct.list
+ruleset=节点选择,https://raw.githubusercontent.com/jiaru1/openclash/main/ProxyLite.list
+ruleset=AI,https://raw.githubusercontent.com/jiaru1/openclash/main/AI.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+ruleset=GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+ruleset=Google,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
+ruleset=Copilot,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list
+ruleset=OneDrive,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list
+ruleset=Microsoft,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+ruleset=Apple,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+ruleset=Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+ruleset=Speedtest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.list
+ruleset=Mytv,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/MyTVSuper.list
+ruleset=YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+ruleset=流媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
+ruleset=流媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+ruleset=流媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
+ruleset=TikTok,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list
+ruleset=国内媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.list
+ruleset=国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=全球直连,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.list
+ruleset=全球直连,[]GEOSITE,CN
+ruleset=节点选择,[]GEOSITE,geolocation-!cn
+ruleset=全球直连,[]GEOIP,CN
+ruleset=漏网之鱼,[]MATCH,漏网之鱼
+ruleset=漏网之鱼,[]FINAL,漏网之鱼
+
+;启用自定义规则集
+
+enable_rule_generator=true
+overwrite_original_rules=true
