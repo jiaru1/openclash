@@ -8,6 +8,8 @@ DOMAIN-SUFFIX,followme.com
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
 IP-CIDR,103.115.43.2/32,no-resolve
+IP-CIDR,35.212.241.113/32,no-resolve
+IP-CIDR,54.238.237.167/32,no-resolve
 
 # 国外DNS
 DOMAIN-SUFFIX,dns.google
